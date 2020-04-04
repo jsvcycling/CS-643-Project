@@ -1,0 +1,22 @@
+plugins {
+    id 'java'
+}
+
+group 'edu.njit.jsv28.cs643'
+version '1.0.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation'org.apache.hadoop:hadoop-client:2.7.1'
+    implementation 'org.apache.hadoop:hadoop-common:2.7.1'
+    implementation 'org.apache.hive:hive-exec:3.1.2'
+}
+
+test {
+    useJUnitPlatform()
+}
