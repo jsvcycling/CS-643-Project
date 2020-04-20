@@ -12,11 +12,8 @@ repositories {
 }
 
 dependencies {
-    implementation'org.apache.hadoop:hadoop-client:2.7.1'
-    implementation 'org.apache.hadoop:hadoop-common:2.7.1'
-    implementation 'org.apache.hive:hive-exec:3.1.2'
-}
+    compile group: 'org.apache.hadoop', name: 'hadoop-common', version: '3.2.1'
+    compile group: 'org.apache.hadoop', name: 'hadoop-mapreduce-client-core', version: '3.2.1'
 
-test {
-    useJUnitPlatform()
+    testCompile group: 'junit', name: 'junit', version: '4.12'
 }
