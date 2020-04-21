@@ -30,8 +30,6 @@ public class AllHourlyStatisticsMapper extends Mapper<LongWritable, Text, Text, 
 
         result.put(new Text("passenger_count"), new IntWritable(Integer.parseInt(parts[3])));
         result.put(new Text("trip_distance"), new FloatWritable(Float.parseFloat(parts[4])));
-        result.put(new Text("PULocationID"), new IntWritable(Integer.parseInt(parts[7])));
-        result.put(new Text("DOLocationID"), new IntWritable(Integer.parseInt(parts[8])));
         result.put(new Text("fare_amount"), new FloatWritable(Float.parseFloat(parts[10])));
         result.put(new Text("tip_amount"), new FloatWritable(Float.parseFloat(parts[13])));
         result.put(new Text("total_amount"), new FloatWritable(Float.parseFloat(parts[16])));
