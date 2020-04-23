@@ -28,12 +28,22 @@ public class AllHourlyStatisticsMapper extends Mapper<LongWritable, Text, Text, 
 
         MapWritable result = new MapWritable();
 
-        result.put(new Text("passenger_count"), new IntWritable(Integer.parseInt(parts[3])));
-        result.put(new Text("trip_distance"), new FloatWritable(Float.parseFloat(parts[4])));
-        result.put(new Text("fare_amount"), new FloatWritable(Float.parseFloat(parts[10])));
-        result.put(new Text("tip_amount"), new FloatWritable(Float.parseFloat(parts[13])));
-        result.put(new Text("total_amount"), new FloatWritable(Float.parseFloat(parts[16])));
+        try {
+            int passengerCount = Integer.parseInt(parts[3]);
+            float tripDistance = Float.parseFloat(parts[4]);
+            float fareAmount = Float.parseFloat(parts[10]);
+            float tipAmount = Float.parseFloat(parts[13]);
+            float totalAmount = Float.parseFloat(parts[16]);
 
-        context.write(new Text(pickupTime), result);
+            result.put(new Text("passenger_count"), new IntWritable(passengerCount));
+            result.put(new Text("trip_distance"), new FloatWritable(tripDistance));
+            result.put(new Text("fare_amount"), new FloatWritable(fareAmount));
+            result.put(new Text("tip_amount"), new FloatWritable(tipAmount));
+            result.put(new Text("total_amount"), new FloatWritable(totalAmount));
+
+            context.write(new Text(pickupTime), result);
+        } catch (Exception e) {
+            // Do nothing.
+        }
     }
 }
