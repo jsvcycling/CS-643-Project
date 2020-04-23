@@ -23,15 +23,15 @@ public class HourlyStatisticsReducer extends Reducer<Text, MapWritable, Text, Ma
 
         float totalFareAmount = 0.f;
         float minFareAmount = Float.MAX_VALUE;
-        float maxFareAmount = Float.MAX_VALUE;
+        float maxFareAmount = Float.MIN_VALUE;
 
         float totalTipAmount = 0.f;
         float minTipAmount = Float.MAX_VALUE;
-        float maxTipAmount = Float.MAX_VALUE;
+        float maxTipAmount = Float.MIN_VALUE;
 
         float totalTotalAmount = 0.f;
         float minTotalAmount = Float.MAX_VALUE;
-        float maxTotalAmount = Float.MAX_VALUE;
+        float maxTotalAmount = Float.MIN_VALUE;
 
         for (MapWritable it : values) {
             count += 1;
