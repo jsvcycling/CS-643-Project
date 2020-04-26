@@ -1,4 +1,4 @@
-package edu.njit.jsv28.cs643.project.reducers;
+package edu.njit.cs643.group3.reducers;
 
 import org.apache.hadoop.io.FloatWritable;
 import org.apache.hadoop.io.IntWritable;

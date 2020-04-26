@@ -1,6 +1,6 @@
-package edu.njit.jsv28.cs643.project.mappers;
+package edu.njit.cs643.group3.mappers;
 
-import edu.njit.jsv28.cs643.project.utils.Constants;
+import edu.njit.cs643.group3.utils.Constants;
 import org.apache.hadoop.io.*;
 import org.apache.hadoop.mapreduce.Mapper;
 

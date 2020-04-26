@@ -1,8 +1,8 @@
-package edu.njit.jsv28.cs643.project.jobs;
+package edu.njit.cs643.group3.jobs;
 
-import edu.njit.jsv28.cs643.project.mappers.AllHourlyStatisticsMapper;
-import edu.njit.jsv28.cs643.project.reducers.HourlyStatisticsReducer;
-import edu.njit.jsv28.cs643.project.utils.Constants;
+import edu.njit.cs643.group3.mappers.AllHourlyStatisticsMapper;
+import edu.njit.cs643.group3.reducers.HourlyStatisticsReducer;
+import edu.njit.cs643.group3.utils.Constants;
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.fs.Path;
 import org.apache.hadoop.io.MapWritable;
